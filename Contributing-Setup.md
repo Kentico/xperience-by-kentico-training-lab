@@ -13,7 +13,7 @@ There are no software requirements to contribute to this repository.
       ```
       ## Goal
 
-      What were you trying to achieve/what you achieved?
+      What were you trying to achieve/did you achieve?
 
       ## Repository refactored/experimented on
 
@@ -21,9 +21,9 @@ There are no software requirements to contribute to this repository.
 
       ## Tools used
 
-      - What AI tool did you use (e.g., GitHUb Copilot, Coursor, ...)?
-      - Which LLM (e.g., Claude Sonnet 4, GPT-5,...)?
-      - If you included code samples, where are they source from?
+      - What AI tool did you use (e.g., GitHub Copilot, Coursor, etc.)?
+      - Which LLM (e.g., Claude Sonnet 4, GPT-5, etc.)?
+      - If you included code samples, where are they sourced from?
 
       ## Notes
 
@@ -35,5 +35,3 @@ There are no software requirements to contribute to this repository.
 1. Once ready, create a PR on GitHub. The PR will need to have all comments resolved before it will be merged.
 
    - The PR should have a helpful description of the scope of changes being contributed.
-   - Include screenshots or video to reflect UX or UI updates
-   - Indicate if new settings need to be applied when the changes are merged - locally or in other environments
