@@ -4,7 +4,7 @@ An MCP (Model Context Protocol) server that translates .NET `.resx` localization
 
 ## Purpose
 
-This MCP server automates the translation of Kentico Xperience localization resource files from English to other languages. It:
+This MCP server automates the translation of Xperience by Kentico localization resource files from English to other languages. It:
 
 - Processes `.resx` XML localization files in batches.
 - Preserves resource keys, placeholders, and formatting.
@@ -223,4 +223,4 @@ Edit the `translateBatch()` function in server.ts to customize translation instr
 
 ## License
 
-Part of the Kentico Xperience Training Lab repository.
+Part of the Xperience by Kentico Training Lab repository.
