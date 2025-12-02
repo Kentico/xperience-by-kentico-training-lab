@@ -1,0 +1,26 @@
+{
+  "name": "admin-localization-ai-translator",
+  "version": "1.0.0",
+  "description": "AI-powered translation tool for Xperience by Kentico admin localization",
+  "main": "src/server.ts",
+  "scripts": {
+    "server:build": "tsc",
+    "server:build:watch": "tsc --watch",
+    "server:dev": "tsx src/server.ts",
+    "server:inspect": "set DANGEROUSLY_OMIT_AUTH=true && npx @modelcontextprotocol/inspector npm run server:dev"
+  },
+  "keywords": [],
+  "author": "Training team, Kentico Software",
+  "license": "MIT",
+  "devDependencies": {
+    "@modelcontextprotocol/inspector": "^0.16.2",
+    "@types/node": "^24.10.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.23.0",
+    "dotenv": "^17.2.1",
+    "openai": "^6.9.1",
+    "tsx": "^4.20.3"
+  }
+}
