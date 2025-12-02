@@ -18,7 +18,7 @@ This MCP server automates the translation of Xperience by Kentico localization r
 - **Node.js** (v18 or later)
 - **LM Studio** installed and running locally
   - Download from [lmstudio.ai](https://lmstudio.ai)
-  - Load a model suitable for translation (recommended: multilingual models like Mixtral, Qwen, or similar)
+  - Load a model suitable for translation (recommended: multilingual models like Gemma3n, Mistral, Qwen, or similar)
   - Start the local server (default: `http://localhost:1234`)
 
 ## Setup
@@ -38,14 +38,14 @@ npm run server:build
 ### 3. Configure LM Studio
 
    1. Launch LM Studio.
-   2. Load a translation-capable model.
-   3. Start the local server (Server tab → Start Server).
+   2. Load a translation-capable model, e.g., `gemma3n` or other.
+   3. Start the local server (Developer tab → Confirm server is running).
    4. Verify it's running at `http://localhost:1234`.
    5. Add to MCP Client.
 
 ### 4. Add this server to your MCP client configuration (e.g., VS Code, Claude Desktop, Cline):
 
-For VS Code, follow [official documentation](https://code.visualstudio.com/docs/copilot/customization/mcp-servers), i.e., `https://code.visualstudio.com/docs/copilot/customization/mcp-servers`
+For VS Code, follow [official documentation](https://code.visualstudio.com/docs/copilot/customization/mcp-servers).
 
 Example `mcp.json` file:
 
@@ -123,7 +123,7 @@ Translate data/localization.server.en-US.txt to French (fr-FR) using a chunk siz
 
 ### Adding Source Files
 
-Place your source .resx localization files in the `data/` directory:
+Place your source `.resx` localization files in the `data/` directory:
 
 ```
 admin-localization-ai-translator/
@@ -219,7 +219,7 @@ admin-localization-ai-translator/
 
 ### Adjusting Translation Prompts
 
-Edit the `translateBatch()` function in server.ts to customize translation instructions or temperature settings.
+Edit the `translateBatch()` function in `server.ts` to customize translation instructions or temperature settings.
 
 ## License
 

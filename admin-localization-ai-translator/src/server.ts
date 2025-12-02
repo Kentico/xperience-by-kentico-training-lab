@@ -10,8 +10,8 @@ import OpenAI from "openai";
 
 // Initialize OpenAI client for LM Studio
 const openai = new OpenAI({
-  baseURL: "http://localhost:1234/v1",
-  apiKey: "lm-studio", // LM Studio doesn't require a real key
+  baseURL: process.env.LLM_BASE_URL || "http://localhost:1234/v1",
+  apiKey: process.env.OPENAI_API_KEY || "lm-studio", // Use env var for production, default for LM Studio
 });
 
 interface ResourceEntry {
@@ -142,7 +142,7 @@ Translated resources:`;
 
     return translatedEntries;
   } catch (error) {
-    throw new Error(`Translation failed for batch ${batchNumber}: ${error}`);
+    throw new Error(`Translation failed for batch ${batchNumber}: ${error instanceof Error ? error.message : String(error)}`);
   }
 }
 
@@ -359,6 +359,6 @@ async function main() {
 }
 
 main().catch((error) => {
-  console.error("Fatal   error:", error);
+  console.error("Fatal error:", error);
   process.exit(1);
 });
