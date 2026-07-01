@@ -1,0 +1,34 @@
+@using TrainingGuides.Web.OneTimeCode
+
+@model IEnumerable<ProductConversionAttempt>
+
+@{
+    Layout = null;
+}
+
+<h1>Product Consolidation Migration Results</h1>
+
+@foreach (ProductConversionAttempt attempt in Model)
+{
+    <div style="border-bottom:1px solid black; margin-bottom:5px; padding-bottom:20px; margin-top:5px;">
+        <strong>Source:</strong> @attempt.SourceContentTypeName
+        <br />
+        <strong>Old Item:</strong> @($"{attempt.OldItemName} (ID: {attempt.OldItemContentItemId})")
+        <br />
+        <strong>New GenericProduct ID:</strong> @(attempt.NewProductContentItemId?.ToString() ?? "N/A")
+        <br />
+        <strong>Is Variant:</strong> @attempt.IsVariant
+        <ul style="color:grey">
+            @foreach (string log in attempt.LogMessages)
+            {
+                <li>@log</li>
+            }
+        </ul>
+        <ul style="color:red">
+            @foreach (var error in attempt.Exceptions)
+            {
+                <li>@error.Message</li>
+            }
+        </ul>
+    </div>
+}
